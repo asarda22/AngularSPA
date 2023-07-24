@@ -1,0 +1,31 @@
+app-view {
+    background-color: darkorange;
+    border: 1px solid #ccc;
+  }
+
+  app-view table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: cornflowerblue;
+  }
+
+  app-view th {
+    display: none;
+  }
+
+  app-view td {
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: larger;
+  }
+
+  h1{
+    margin-left: 40px;
+  }
+
+  app-view th:first-child,
+  app-view td:first-child {
+  width: 50%;
+}

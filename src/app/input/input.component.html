@@ -1,0 +1,8 @@
+<h1>Input Container</h1>
+<div>
+    <button class="plus" (click)="addInput()">+</button>
+    <button class="submit" (click)="submitValues()">Submit</button>
+  </div>
+  <div *ngFor="let inputField of inputFields; let i = index">
+    <input type="text" [(ngModel)]="inputFields[i]" [ngModelOptions]="{ updateOn: 'blur' }" #inputField/>
+  </div>

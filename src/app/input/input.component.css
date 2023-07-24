@@ -1,0 +1,38 @@
+
+app-input {
+    background-color: goldenrod;   
+  }
+
+  app-input button {
+    background-color: olivedrab;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 5px;;
+    font-size: large;
+  }
+
+  app-input input[type="text"] {
+    background-color: cornflowerblue;
+    color: white;
+    margin-left: 40px;
+    margin-top: 20px;
+    width: 75%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: large;
+  }
+
+  .plus, h1
+  {
+    margin-left: 40px;
+  }
+
+  .submit
+  {
+    margin-right: 130px;
+    float: right;
+  }
+  

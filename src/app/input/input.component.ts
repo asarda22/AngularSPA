@@ -15,7 +15,7 @@ export class InputComponent {
   constructor(private dataService: DataService) {}
 
   addInput() {
-    this.inputFields.push({value:''});
+    this.inputFields.push({value:'',selectedOption: ''});
     setTimeout(() => {
       this.inputField.nativeElement.focus();
     });

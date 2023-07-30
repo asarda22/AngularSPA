@@ -5,4 +5,8 @@
   </div>
   <div *ngFor="let inputField of inputFields; let i = index">
     <input type="text" [(ngModel)]="inputField.value" [ngModelOptions]="{ updateOn: 'blur' }" #inputField/>
+    <select [(ngModel)]="inputField.selectedOption">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
   </div>

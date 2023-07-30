@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
+import { DemoTableRow } from 'src/DemoTableRow';
 
 @Component({
   selector: 'app-view',
@@ -7,7 +8,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent {
-  values: string[] = [];
+  values: DemoTableRow[] = [];
 
   constructor(private dataService: DataService) {}
 

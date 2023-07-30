@@ -1,5 +1,6 @@
 import { Component ,OnInit ,ElementRef, ViewChild} from '@angular/core';
 import { DataService } from '../data.service';
+import { DemoTableRow } from 'src/DemoTableRow';
 
 @Component({
   selector: 'app-input',
@@ -7,21 +8,26 @@ import { DataService } from '../data.service';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent {
-  inputFields: string[] = [];
+  inputFields: DemoTableRow[] = [];
 
   @ViewChild('inputField') inputField!: ElementRef;
 
   constructor(private dataService: DataService) {}
 
   addInput() {
-    this.inputFields.push('');
+    this.inputFields.push({value:''});
     setTimeout(() => {
       this.inputField.nativeElement.focus();
     });
   }
 
   submitValues() {
-    const nonEmptyFields = this.inputFields.filter((field) => field.trim() !== '');
-    this.dataService.setValues(nonEmptyFields);
+    for (const inputValue of this.inputFields){
+      if (inputValue.value != '')
+      {
+      this.dataService.setValues(inputValue);
+      }
+    }
+    this.inputFields = [];
   }
 }

@@ -10,7 +10,7 @@
     <ng-container *ngIf="values.length > 0">
       <tr *ngFor="let value of values; let i = index">
         <td>{{ i + 1 }}</td>
-        <td>{{ value }}</td>
+        <td>{{ value.value }}</td>
       </tr>
   </ng-container>
   <ng-container *ngIf="values.length === 0">
